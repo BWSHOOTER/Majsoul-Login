@@ -2,7 +2,10 @@ name: Majsoul-Login
 on:
   workflow_dispatch:
   schedule: #5:00
-   - cron: '5 21 * * *'
+    # 04:05 北京时间 -> 20:05 伦敦时间（前一天）
+    - cron: '5 20 * * *'
+    # 05:05 北京时间 -> 21:05 伦敦时间
+    - cron: '5 21 * * *'
 jobs:
   login:
     name: Majsoul-Login
